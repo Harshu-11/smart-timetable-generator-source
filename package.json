@@ -1,0 +1,18 @@
+{
+  "name": "smart-timetable-generator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Smart timetable generator with separate React frontend and Express API",
+  "scripts": {
+    "start": "npm run start --workspace backend",
+    "dev": "concurrently -k -n API,WEB -c cyan,green \"npm run dev --workspace backend\" \"npm run dev --workspace frontend\"",
+    "build": "npm run build --workspace frontend"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
